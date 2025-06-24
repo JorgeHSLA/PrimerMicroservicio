@@ -19,7 +19,7 @@ public class Company {
     private String name;   // -> Columna "name"
 }
 por ende en la base de datos se debe expresar como
-CREATE TABLE company (
+CREATE TABLE company
     id   BIGINT PRIMARY KEY,
     name VARCHAR(255)
 );
