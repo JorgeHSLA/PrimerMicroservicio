@@ -1,7 +1,12 @@
 package com.primerMicroSer.companies_crud.services;
 
 import com.primerMicroSer.companies_crud.entities.Company;
+import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
+
+@Service
+@Transactional
 public class CompanyServiceImplementation implements CompanyService {
 
 
