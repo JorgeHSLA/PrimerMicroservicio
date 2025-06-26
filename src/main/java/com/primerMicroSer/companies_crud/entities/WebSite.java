@@ -28,9 +28,6 @@ public class WebSite implements Serializable { // Serializable, es decir se vuel
 
     @Enumerated(value = EnumType.STRING)
     private Category category;
-
-
-
     private String description;
 
 }
