@@ -32,7 +32,7 @@ public class CompanyController {
     @GetMapping(path = "{name}")
     public ResponseEntity<Company> get(@PathVariable String name){
         log.info("GET: /company/"+name);
-        return ResponseEntity.ok(companyService.readByName(name));
+        return ResponseEntity.ok(companyService.readByName(name)); // no es necesario el buildx
 
     }
 
@@ -44,7 +44,7 @@ public class CompanyController {
     public ResponseEntity<Company> post(@RequestBody Company company){
 
         log.info("POST: /company/"+company.getName());
-        return ResponseEntity.created(URI.create(companyService.create(company).getName())).build();
+        return ResponseEntity.created(URI.create(companyService.create(company).getName())).build(); // en el create es necesaio el build
 
     }
 
@@ -63,4 +63,22 @@ public class CompanyController {
     //                                                                                                                              /////
     //          este lo transorma en un obejeto company                                                                             /////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    @PutMapping(path = "{name}")
+    public ResponseEntity<Company> put(@RequestBody Company company,@PathVariable String name){
+        log.info("PUT: /company/"+name);
+        return ResponseEntity.ok(companyService.update(company, name)); // en el ok no es necesario el build
+
+    }
+
+    @DeleteMapping(path = "{name}")
+    public ResponseEntity<?> delete(@PathVariable String name){
+        log.info("DELETE: /company/"+name);
+        companyService.delete(name);
+        return ResponseEntity.noContent().build();  // necesario el build
+    }
+
 }
+
+
