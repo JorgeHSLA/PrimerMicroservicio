@@ -39,16 +39,22 @@ public class CompanyServiceImplementation implements CompanyService {
     @Override
     public Company readByName(String name) {
 
-        return companyRepository.findByName(name).orElseThrow(()-> new NoSuchElementException("error finding a company by a name")); //orElseTrow para lanzar una excepcion
+        return companyRepository.findByName(name).orElseThrow(()-> new NoSuchElementException("error finding a company by a name in the function readByName")); //orElseTrow para lanzar una excepcion
     }
     @Override
     public Company update(Company company, String name) {
-
-        return null;
+        var companyToUpdate = this.companyRepository.findByName(name).orElseThrow(()-> new NoSuchElementException("error finding a company by a name in the function update"));
+        companyToUpdate.setLogo(company.getLogo());
+        companyToUpdate.setFounder(company.getFounder());
+        companyToUpdate.setWebSites(company.getWebSites());
+        companyToUpdate.setFoundationDate(company.getFoundationDate());
+        return companyToUpdate;
     }
 
     @Override
     public void delete(String name) {
+        var companyToDelete = this.companyRepository.findByName(name).orElseThrow(()-> new NoSuchElementException("error finding a company by a name in the function update"));
+        companyRepository.delete(companyToDelete);
 
     }
 }
