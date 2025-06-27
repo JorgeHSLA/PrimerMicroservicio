@@ -11,3 +11,6 @@ Primer Microservicio que voy a hacer usando de guia un curso de udemy, este tend
   ![image](https://github.com/user-attachments/assets/4ce0679f-9ffb-4b67-8436-1dccd558b19b)
 
   Se usa Java 21 porque es una version LTS (Long-Term Support), Java 24 no.
+
+# server Regisry y Discovery
+Despues de crear un primer microservicio, entre comillas, usaremos este para la implementacion de un server Regisry y Discovery
