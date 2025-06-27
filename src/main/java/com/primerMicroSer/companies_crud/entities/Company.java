@@ -39,12 +39,12 @@ public class Company {
 //    UUID	            Sistemas distribuidos	        Único global, no requiere DB	Mayor tamaño (128 bits)             //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String founder;
     private String logo;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate foundationDate;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

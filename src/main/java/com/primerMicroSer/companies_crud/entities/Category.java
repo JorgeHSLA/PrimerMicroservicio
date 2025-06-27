@@ -1,7 +1,7 @@
 package com.primerMicroSer.companies_crud.entities;
 
 public enum Category {
-    SOCIAl_NETWORK,
+    SOCIAL_NETWORK,
     SERVICES,
     STREAMING,
     DEVICES,

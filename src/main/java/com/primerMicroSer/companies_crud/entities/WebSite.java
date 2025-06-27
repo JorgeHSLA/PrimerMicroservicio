@@ -6,28 +6,24 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+
 @Entity
 @Data
-public class WebSite implements Serializable { // Serializable, es decir se vuelve json
+public class WebSite implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
-
-
-//va a ser la columna llamada category
+    //va a ser la columna llamada category
     @Column(columnDefinition = "category")
-    //Controla cómo JPA (Java Persistence API) mapea un enum Java a la base de datos.
-    //ejemplo:
+    @Enumerated(value = EnumType.STRING)
+    private Category category;
+    private String description;
+}
+//Controla cómo JPA (Java Persistence API) mapea un enum Java a la base de datos.
+//ejemplo:
 //    Valor Java	        Almacenado en DB como
 //    Category.TECHNOLOGY	"TECHNOLOGY"
 //    Category.HEALTHCARE	"HEALTHCARE"
 //    Category.EDUCATION	"EDUCATION"
-
-    @Enumerated(value = EnumType.STRING)
-    private Category category;
-    private String description;
-
-}
