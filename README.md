@@ -65,5 +65,17 @@ ademas tambien se uso eureka netflix para saber acerca del
 
 # Config server
 
-Patron de microservicios que sirve oara centralizar la configuracion en un solo lugar
+Patron de microservicios que sirve oara centralizar la configuracion de los microservicios en un solo lugar, en el caso de spring tenemos los perfiles y ademas si el config server se actualiza los microservcios conectados a el (es decir sus clientes) tambien:
+
+<img width="1793" alt="image" src="https://github.com/user-attachments/assets/627df757-0a02-4d98-b3ba-ff7df23fca4d" />
+
+
+### Dependencias y versiones:
+
+<img width="1516" alt="image" src="https://github.com/user-attachments/assets/066ef145-ac48-4d6f-82f9-75bbb702dd30" />
+
+no se agrego el dev tools porque no hay que debuggear 
+
+
+
 
