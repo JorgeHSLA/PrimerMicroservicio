@@ -16,6 +16,9 @@ Primer Microservicio que voy a hacer usando de guia un curso de udemy, este tend
 Despues de crear un primer microservicio, entre comillas, usaremos este para la implementacion de un server Regisry y Discovery:
 Es un directorio centralizado donde cada microservicio registra su dirección IP, puerto y nombre al iniciar. Es como una guía telefónica de microservicios.
 
+### 🔹 Server Registry (Registro de Servicios)
+Es un directorio centralizado donde cada microservicio registra su dirección IP, puerto y nombre al iniciar. Es como una guía telefónica de microservicios.
+
 🔧 Ejemplos comunes:
 
 Eureka (Netflix)
@@ -26,7 +29,20 @@ Zookeeper
 
 Kubernetes Service Registry (interno de K8s)
 
-en este ejemplo se usara eureka, sin embargo este dejo de actualizarse en 2018 y ahora se usa mas kubernetes u otros.
+### 🔹 Service Discovery (Descubrimiento de Servicios)
+Es el mecanismo mediante el cual un servicio encuentra a otro en base a su nombre lógico, consultando el Service Registry.
+
+Hay dos formas de hacerlo:
+
+Client-side Discovery (Descubrimiento en el cliente)
+El cliente consulta el registro y decide a qué instancia llamar.
+
+✅ Ejemplo: Spring Cloud + Eureka
+
+Server-side Discovery (Descubrimiento en el servidor)
+El cliente envía la solicitud a un load balancer que consulta el registro y reenvía la solicitud al servicio destino.
+
+✅ Ejemplo: Kubernetes con su kube-proxy y servicios tipo ClusterIP
 
 ## como funciona:
 
