@@ -28,9 +28,12 @@ Kubernetes Service Registry (interno de K8s)
 
 en este ejemplo se usara eureka, sin embargo este dejo de actualizarse en 2018 y ahora se usa mas kubernetes u otros.
 
+## como funciona:
+
 para entender porque se usa esta arquitectura tenemos que pensar en grande, donde un microservicio se instancia muchisimas veces, como se sabria a cual de todas las instancias conectarse, ahi entra service registry, en donde se encuentran las direcciones y puertos de cada instancia
 
-## como funciona:
+<img width="1778" alt="image" src="https://github.com/user-attachments/assets/88c66727-6b1f-458e-ba10-a704ba7390da" />
+
 
 ## importante
 en esta parte del curso paso algo inesperado, teniamos que usar spring cloud pero este no era compatible con la 
