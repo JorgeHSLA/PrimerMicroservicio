@@ -13,7 +13,7 @@ Primer Microservicio que voy a hacer usando de guia un curso de udemy, este tend
   Se usa Java 21 porque es una version LTS (Long-Term Support), Java 24 no.
 
 # Service Registry and Discovery
-Despues de crear un primer microservicio, entre comillas, usaremos este para la implementacion de un server Regisry y Discovery:
+
 ¿Cómo sabe un servicio (cliente) dónde encontrar a otro servicio (proveedor), si estos pueden estar cambiando de IP o puerto (por escalado, fallos, reinicios, etc.)?
 
 Ahí es donde entra el Service Registry and Discovery.
