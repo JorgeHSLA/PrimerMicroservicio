@@ -1,0 +1,60 @@
+
+
+
+
+
+###########################################################
+# EL POOL:
+    #Imagina un servicio de alquiler de bicicletas:
+    #
+    #   Sin pool: Cada usuario compra una bici nueva y la tira después de usarla (caro e ineficiente).
+    #
+    #   Con pool: Hay 5 bicis disponibles. Los usuarios las toman prestadas, las usan, y las devuelven para que otros las usen.Imagina un servicio de alquiler de bicicletas:
+    #
+#
+##########################################################
+
+
+
+
+spring:
+
+  datasource:
+    username: jorge
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 20000
+
+      #connection-timeout=20000: Tiempo máximo de espera para obtener una conexión (20 segundos).
+
+      #maximum-pool-size=5: Número máximo de conexiones activas en el pool
+
+    url: jdbc:postgresql://localhost:5432/companies
+    password: udemy
+  application:
+    name: companies-crud
+server:
+  servlet:
+    context-path: /companies-crud
+  port: 8081
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+###########################################################
+#estas dos lineas de codigo ayudan al desarrollador a ver como se comporta la base de dastos en su aplicacion
+#no los uses en produccion, solo al desarrollar
+#
+##########################################################
+
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
