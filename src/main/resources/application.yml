@@ -1,42 +1,31 @@
-
-
-
-
-
 ###########################################################
 # EL POOL:
-    #Imagina un servicio de alquiler de bicicletas:
-    #
-    #   Sin pool: Cada usuario compra una bici nueva y la tira despuÈs de usarla (caro e ineficiente).
-    #
-    #   Con pool: Hay 5 bicis disponibles. Los usuarios las toman prestadas, las usan, y las devuelven para que otros las usen.Imagina un servicio de alquiler de bicicletas:
-    #
+# Imagina un servicio de alquiler de bicicletas:
 #
-##########################################################
-
-
-
+#   Sin pool: Cada usuario compra una bici nueva y la tira despu√©s de usarla (caro e ineficiente).
+#
+#   Con pool: Hay 5 bicis disponibles. Los usuarios las toman prestadas, las usan, y las devuelven para que otros las usen.
+###########################################################
 
 spring:
+  application:
+    name: companies-crud
 
   datasource:
+    url: jdbc:postgresql://localhost:5432/companies
     username: jorge
+    password: udemy
     hikari:
       maximum-pool-size: 5
       connection-timeout: 20000
+      # connection-timeout: Tiempo m√°ximo de espera para obtener una conexi√≥n (20 segundos).
+      # maximum-pool-size: N√∫mero m√°ximo de conexiones activas en el pool
 
-      #connection-timeout=20000: Tiempo m·ximo de espera para obtener una conexiÛn (20 segundos).
-
-      #maximum-pool-size=5: N˙mero m·ximo de conexiones activas en el pool
-
-    url: jdbc:postgresql://localhost:5432/companies
-    password: udemy
-  application:
-    name: companies-crud
 server:
+  port: 0
   servlet:
     context-path: /companies-crud
-  port: 8081
+
 logging:
   level:
     org:
@@ -46,11 +35,12 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
+
 ###########################################################
-#estas dos lineas de codigo ayudan al desarrollador a ver como se comporta la base de dastos en su aplicacion
-#no los uses en produccion, solo al desarrollar
-#
-##########################################################
+# Estas l√≠neas ayudan al desarrollador a ver c√≥mo se comporta
+# la base de datos durante el desarrollo.
+# No las uses en producci√≥n.
+###########################################################
 
 eureka:
   instance:
