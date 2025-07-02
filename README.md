@@ -12,9 +12,11 @@ Primer Microservicio que voy a hacer usando de guia un curso de udemy, este tend
 
   Se usa Java 21 porque es una version LTS (Long-Term Support), Java 24 no.
 
-# server Regisry y Discovery
+# Service Registry and Discovery
 Despues de crear un primer microservicio, entre comillas, usaremos este para la implementacion de un server Regisry y Discovery:
-Es un directorio centralizado donde cada microservicio registra su dirección IP, puerto y nombre al iniciar. Es como una guía telefónica de microservicios.
+¿Cómo sabe un servicio (cliente) dónde encontrar a otro servicio (proveedor), si estos pueden estar cambiando de IP o puerto (por escalado, fallos, reinicios, etc.)?
+
+Ahí es donde entra el Service Registry and Discovery.
 
 ### 🔹 Server Registry (Registro de Servicios)
 Es un directorio centralizado donde cada microservicio registra su dirección IP, puerto y nombre al iniciar. Es como una guía telefónica de microservicios.
@@ -44,16 +46,17 @@ El cliente envía la solicitud a un load balancer que consulta el registro y ree
 
 ✅ Ejemplo: Kubernetes con su kube-proxy y servicios tipo ClusterIP
 
-## como funciona:
+## Como funciona:
 
-para entender porque se usa esta arquitectura tenemos que pensar en grande, donde un microservicio se instancia muchisimas veces, como se sabria a cual de todas las instancias conectarse, ahi entra service registry, en donde se encuentran las direcciones y puertos de cada instancia
 
 <img width="1778" alt="image" src="https://github.com/user-attachments/assets/88c66727-6b1f-458e-ba10-a704ba7390da" />
 
 
-## importante
+## Importante
 en esta parte del curso paso algo inesperado, teniamos que usar spring cloud pero este no era compatible con la 
 ultima version de springboot, por ende se tuvo que cambiar la version a 3.4.7 para que funcionara todo bien
+
+ademas tambien se uso eureka netflix para saber acerca del 
 
 ### Dependencias y versiones:
 
