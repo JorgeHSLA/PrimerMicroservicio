@@ -65,3 +65,5 @@ ademas tambien se uso eureka netflix para saber acerca del
 
 # Config server
 
+Patron de microservicios que sirve oara centralizar la configuracion en un solo lugar
+
