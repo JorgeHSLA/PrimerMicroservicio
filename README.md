@@ -93,6 +93,9 @@ Esto lo que genera es que desde nuestro microservicio podemos elegir a que perfi
 Un ejemplo de como se guarda la infomracion en cada perfil seria el siguiente:
 <img width="1033" alt="image" src="https://github.com/user-attachments/assets/65dee456-cc8a-4550-8ae2-323d53e35383" />
 
+informacion de github si quieres usar un ssh: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+
 
 
 
