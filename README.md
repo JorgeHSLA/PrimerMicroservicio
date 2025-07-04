@@ -96,10 +96,7 @@ Un ejemplo de como se guarda la infomracion en cada perfil seria el siguiente:
 informacion de github si quieres usar un ssh: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 
-
-
-
-
+# Balanceo de carga
 
 
 
