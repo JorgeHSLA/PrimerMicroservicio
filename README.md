@@ -85,10 +85,14 @@ Desde el config server, si el repositorio es privado (como deberia serlo porque 
 <img width="952" alt="image" src="https://github.com/user-attachments/assets/4d90ed78-ffb8-407a-948b-523299ee6613" />
 
 
-Esto lo que genera es que desde nuestro microservicio podemos elegir a que perfil acceder:
+Esto lo que genera es que desde nuestro microservicio podemos elegir a que perfil acceder, en este ejeplo accede al config server (puerto 7777) y de este extrae la informacion:
 ![image](https://github.com/user-attachments/assets/ec8b758f-a025-4ae0-ba2f-28f2d671483a)
 
-Aca podemos ver que accede al config server (puerto 7777) y de este extrae la informacion
+
+
+Un ejemplo de como se guarda la infomracion en cada perfil seria el siguiente:
+<img width="1033" alt="image" src="https://github.com/user-attachments/assets/65dee456-cc8a-4550-8ae2-323d53e35383" />
+
 
 
 
