@@ -76,6 +76,23 @@ Patron de microservicios que sirve oara centralizar la configuracion de los micr
 
 no se agrego el dev tools porque no hay que debuggear 
 
+## IMPORTANTE:
+
+El config server usa git, yo para este ejercicio use github, se debe crear un repositorio con las configuraciones, en este se guardan los perfiles. Ejemplo:
+![image](https://github.com/user-attachments/assets/ee93f7ee-be9e-47f7-b453-5c48f28a42fc)
+
+Desde el config server, si el repositorio es privado (como deberia serlo porque maneja informacion delicada) se debe agregar usuario y contra, sin embargo la contra se puede cambiar por un token. ejemplo con token:
+<img width="952" alt="image" src="https://github.com/user-attachments/assets/4d90ed78-ffb8-407a-948b-523299ee6613" />
+
+
+Esto lo que genera es que desde nuestro microservicio podemos elegir a que perfil acceder:
+![image](https://github.com/user-attachments/assets/ec8b758f-a025-4ae0-ba2f-28f2d671483a)
+
+Aca podemos ver que accede al config server (puerto 7777) y de este extrae la informacion
+
+
+
+
 
 
 
