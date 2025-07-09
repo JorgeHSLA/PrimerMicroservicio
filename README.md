@@ -99,4 +99,25 @@ informacion de github si quieres usar un ssh: https://docs.github.com/en/authent
 # Balanceo de carga
 
 
+patron load balancing
+Es parte de un patrón de comunicación y distribución que permite que múltiples instancias de un servicio se repartan las solicitudes, mejorando:
+
+-El rendimiento
+
+-La disponibilidad
+
+-La tolerancia a fallos
+
+Teniendo en cuneta esto podemos saber que signifca que trabaja de mano con el discovery server
+
+Para implementar esto se puede usar lo primordial no esta en como inicialicemos el spring, sin embargo en este curso se uso un microservicio de report para implementar el balanceo:
+
+
+<img width="1516" alt="image" src="https://github.com/user-attachments/assets/3aec8f69-0dc4-47d3-8f06-5e707df2e575" />
+
+para ser mas enfatico lo primordial para el balaceo de cargas con springboot esta en un bean:
+
+
+<img width="1364" alt="image" src="https://github.com/user-attachments/assets/e7f2f542-eca1-43a8-9b19-cd640d72ee1a" />
+
 
