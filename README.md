@@ -120,7 +120,7 @@ para ser mas enfatico lo primordial para el balaceo de cargas con springboot est
 
 <img width="1364" alt="image" src="https://github.com/user-attachments/assets/e7f2f542-eca1-43a8-9b19-cd640d72ee1a" />
 
-# API gateaway
+# API gateway
 
 Es mala practica que para acceder a los microservicios de una aplicaciono servicio se acceda directamente a ellos, aqui es donde entra este patron, el cual redirige peticiones.
 
