@@ -126,4 +126,11 @@ Es mala practica que para acceder a los microservicios de una aplicaciono servic
 
 En este normalmente va la seguridad, ya que sin este no se puede acceder al resto de microservicios, lo que hace todo mas escalable ya que no hay que implmenetar seguridad en todos los microservicios, o no al menos de una manera tan compleja.
 
+la configuracion en el inicializador:
+
+<img width="1521" height="739" alt="image" src="https://github.com/user-attachments/assets/dcdb3d8d-d799-404e-8739-e310464a83d8" />
+
+
+
+
 
